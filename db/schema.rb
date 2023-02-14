@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_14_113959) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_14_115637) do
   create_table "consultations", force: :cascade do |t|
     t.integer "doctor_id"
     t.integer "patient_id"
@@ -39,6 +39,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_14_113959) do
     t.string "last_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "age"
   end
 
   add_foreign_key "consultations", "doctors"
